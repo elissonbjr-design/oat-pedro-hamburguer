@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburgueria</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="burger-container">
+      <header>
+        <h1>Cardápio</h1>
+      </header>
+
+      <form id="burger-form">
+        <p>Cadastrar novo Hambúrguer</p>
+        <div class="form-control">
+          <input
+            type="text"
+            id="burger-input"
+            placeholder="Ex: X-Bacon com Cheddar"
+          />
+          <button type="submit" title="Adicionar ao cardápio">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+      </form>
+
+      <form id="edit-form" class="hide">
+        <p>Editar item do cardápio</p>
+        <div class="form-control">
+          <input type="text" id="edit-input" />
+          <button type="submit" title="Salvar alteração">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+        </div>
+        <button id="cancel-edit-btn">Cancelar</button>
+      </form>
+
+      <div id="toolbar">
+        <div id="search">
+          <h4>Buscar no Menu:</h4>
+          <form>
+            <input type="text" id="search-input" placeholder="Ex: Salada..." />
+            <button id="erase-button" title="Limpar busca">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <h4>Status do Estoque:</h4>
+          <select id="filter-select">
+            <option value="all">Todos os itens</option>
+            <option value="available">Em Estoque (Disponível)</option>
+            <option value="out">Esgotados</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="burger-list">
+        </div>
+    </div>
+  </body>
+</html>
